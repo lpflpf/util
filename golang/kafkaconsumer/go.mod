@@ -1,4 +1,4 @@
-module e.360.cn/kafkaconsumer
+module github.com/lpflpf/kafkaconsumer
 
 go 1.12
 

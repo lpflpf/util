@@ -1,8 +1,8 @@
 package main
 
 import (
-	"e.360.cn/kafkaconsumer/kafkautils"
 	"github.com/Shopify/sarama"
+	"github.com/lpflpf/kafkaconsumer/kafkautils"
 	"math/rand"
 	"os"
 	"os/signal"
