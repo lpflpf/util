@@ -106,9 +106,7 @@ func (consumer *Consumer) ConsumeClaim(session sarama.ConsumerGroupSession, clai
 		case <-consumer.shutdown:
 			return
 		case message := <-claim.Messages():
-			mutex.Lock()
 			waitCommitQueue.PushBack(message)
-			mutex.Unlock()
 			consumer.chMessage[consumer.Sharding(message)] <- &CMessage{
 				Message: message,
 				MarkMessage: func() {
